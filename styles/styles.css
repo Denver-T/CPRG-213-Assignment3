@@ -1,4 +1,4 @@
-/************* your name: 
+/************* your name: Denver Timlick
 
 INSTRUCTIONS:
 Comments starting with TO-DO have been included in this file to describe the needed styling: please translate these to the appropriate CSS declarations. 
@@ -24,6 +24,9 @@ body {
 
 /* TO DO: all elements with the .flex class applied are to be made into flex-box containers. */
 
+.flex {
+    display: flex;
+}
 
 /************* site-wide text styling *************/
 
@@ -45,96 +48,39 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%; /* Takes full available space */
 }
 
-/* Second-level headings */
 h2 {
     font-size: 36px;
     margin-bottom: 12px;
 }
 
-/* Large text class */
 .large-text {
     font-size: 24px;
 }
 
-/* Fake button class */
 .fake-button {
-    background-color: #FFDB58; /* Mustard yellow */
+    background-color: #E5AF42;
     text-align: center;
     line-height: 3;
     border: 1px solid black;
-    display: inline-block;
-    padding: 0 15px;
 }
 
-/* Anchor styles */
 a {
     text-decoration: none;
     color: black;
 }
 
-main a:hover,
-footer a:hover {
+main a:hover, footer a:hover {
     text-decoration: underline;
 }
 
-/* Hover states */
-.fake-button:hover,
-.blue-hover:hover {
+.fake-button:hover, .blue-hover:hover {
     text-decoration: underline;
-    background-color: #6495ED; /* Cornflower blue */
+    background-color: #4278e5;
     color: white;
     cursor: pointer;
 }
-
-/* Additional styles to match your HTML structure */
-.booking-page {
-    font-family: 'Montserrat', sans-serif;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.day-selector {
-    list-style: none;
-    padding: 0;
-    gap: 10px;
-    margin: 15px 0;
-}
-
-.day-selector li {
-    padding: 8px 12px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
-
-.top-margin {
-    margin-top: 20px;
-}
-
-.flex {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.small-button {
-    padding: 2px 8px;
-    border-radius: 3px;
-    display: inline-block;
-}
-
-.clicked {
-    background-color: #6495ED; /* Cornflower blue */
-    color: white;
-}
-
-
-
-
-
 
 /************* header/footer styling *************/
 
@@ -145,34 +91,32 @@ footer a:hover {
     - there will be 25px of space between the header and main, and 50px of space between main and footer.
     - the footer will be 60px tall, have a font-weight of 200, and the text within will be centered vertically and horizontally.
 */
-header {
-    background-color: #FFDB58;
-    height: 150px;
-    display: flex;
-    align-items: center;
-    padding-left: 25px;
-    margin-bottom: 25px;
+
+header, footer {
+    background-color: #E5AF42;
 }
 
+header {
+    height: 150px;
+}
 
 header img {
     width: 100px;
     height: 100px;
-    margin: 25px 25px 25px 0;
+    margin: 25px 0 25px 25px;
+}
+
+main {
+    margin: 25px 0 50px;
 }
 
 footer {
-    background-color: #FFDB58;
     height: 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     font-weight: 200;
-    padding: 0 20px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
 
 /************* index page *************/
 
@@ -184,7 +128,32 @@ footer {
     - the pair of fake-buttons will be centered on the page. HINT: can calculate the required margin to make them appear to be centered.
 */
 
+.index main {
+    display: flex;
+    gap: 25px;
+}
 
+.index img {
+    padding-left: 25px;
+    width: 300px;
+    margin-bottom: 50px;
+}
+
+.index main h2 {
+    line-height: 36px;
+}
+
+.index p {
+    margin-bottom: 12px;
+}
+
+.index .fake-button {
+    width: 250px;
+    display: flex;
+    gap: 150px;
+    justify-content: center;
+    margin: 0 auto;
+}
 
 
 
@@ -201,49 +170,40 @@ footer {
     - all items within the page will be centered within their available space.
 
 */
-
-.booking-page {
-    display: grid;
-    grid-template-columns: 1fr 300px;
-    gap: 25px;
-    align-items: start;
+.booking main {
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18px;
 }
 
-.booking-page img {
-    width: 100%;
-    max-width: 300px;
-    margin-bottom: 50px;
+.day-selector {
+    margin-bottom: 12px;
 }
 
-.booking-page > div:first-child {
-    grid-column: 1;
+.booking, li {
+    text-align: center;
+    border: 1px solid black;
+    width: 60px;
+    margin-right: 20px;
 }
 
-.booking-page h2 {
-line-height: 1em; /* Equal to font size */
-margin-bottom: 12px;
+.small-button {
+    border: 1px solid black;
+    padding: 5px;
 }
 
-/* Paragraph spacing */
-.booking-page p {
-margin-bottom: 12px;
+.top-margin {
+    margin: 24px 0 12px;
 }
 
-/* Button container */
-.button-group {
-display: flex;
-justify-content: center;
-gap: 150px;
-margin-top: 30px;
+#clear-days {
+    width: 200px;
 }
 
-/* Fake button styles */
-.booking-page .fake-button {
-width: 250px;
-text-align: center;
-margin: 0; /* Remove any default margins */
+.clicked {
+    background-color: #E5AF42;
 }
-
 
 /************* contact page *************/
 /* TO DO:
@@ -254,73 +214,42 @@ margin: 0; /* Remove any default margins */
     - the edges of the button will line up exactly with the text-area element. HINT: time for some math!
 */
 
-.contact-page {
+.contact main {
     height: 420px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
 }
 
-.contact-form {
-display: grid;
-grid-template-columns: 150px 300px;
-gap: 24px;
-align-items: center;
+.contact form {
+    display: flex;
+    gap: 24px;
 }
 
-.form-labels {
-text-align: right;
-grid-column: 1;
+.contact .labels-column {
+    width: 150px;
+    text-align: right;
 }
 
-.form-inputs {
-grid-column: 2;
+.contact .inputs-column {
+    width: 300px;
 }
 
-.contact-page input,
-.contact-page textarea,
-.contact-page button {
-font-family: 'Montserrat', sans-serif;
-font-size: 16px;
-line-height: 24px;
-border: 1px solid black;
-border-radius: 4px;
-padding: 4px 8px;
-margin-bottom: 24px;
-width: 100%;
-box-sizing: border-box;
+.contact input,
+.contact textarea,
+.contact button {
+    font-family: inherit; 
+    font-size: 16px;
+    line-height: 24px;
+    border: 1px solid black; 
+    margin-bottom: 24px;
+    width: 100%;
 }
 
-.contact-page textarea {
-height: 150px;
-resize: vertical;
+.contact textarea {
+    height: 150px;
 }
 
-.contact-page button {
-width: calc(300px + 8px); /* 300px width + padding */
-padding: 8px;
-background-color: #FFDB58; /* Mustard yellow */
-cursor: pointer;
-transition: all 0.3s ease;
+.contact button {
+    width: calc(300px + 150px + 24px);
 }
-
-.contact-page button:hover {
-background-color: #6495ED; /* Cornflower blue */
-color: white;
-text-decoration: underline;
-}
-
-/* Ensure button lines up with textarea */
-.form-row:last-child {
-grid-column: 1 / span 2;
-display: flex;
-justify-content: flex-end;
-}
-
-.form-row:last-child button {
-margin-right: 0;
-}
-
-
