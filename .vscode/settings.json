@@ -1,0 +1,14 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "Postgres_CPRG",
+            "database": "cprg250_db",
+            "username": "postgres",
+            "password": "2626"
+        }
+    ]
+}
