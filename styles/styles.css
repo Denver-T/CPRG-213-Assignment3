@@ -170,6 +170,13 @@ footer {
     - all items within the page will be centered within their available space.
 
 */
+.booking-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .booking main {
     width: 600px;
     margin: 0 auto;
