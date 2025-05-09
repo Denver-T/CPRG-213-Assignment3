@@ -220,18 +220,31 @@ footer {
     - all form input, textarea, and and button elements will have the same font as the rest of the page, a line-height of 24px, a font-size of 16px, and the same border as other buttons on the site. There will be 24px of space below each of these elements.
     - the edges of the button will line up exactly with the text-area element. HINT: time for some math!
 */
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-.contact main {
+
+
+.contact {
     height: 420px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .contact form {
     display: flex;
     gap: 24px;
 }
+
+.contact form label {
+    white-space: nowrap;
+}
+
 
 .contact .labels-column {
     width: 150px;
